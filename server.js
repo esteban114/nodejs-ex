@@ -1,7 +1,10 @@
 //  OpenShift sample Node application
 var express = require('express'),
+    os = require("os"),
     app     = express(),
     morgan  = require('morgan');
+
+var hostname = os. hostname();
     
 Object.assign=require('object-assign')
 
@@ -110,7 +113,7 @@ app.get('/pagecount', function (req, res) {
 });
 
 app.get('/esteban', function (req, res) {
-    res.send('Hola');
+    res.send('Hola Marto Toropu:' + hostname);
 });
 
 // error handling
